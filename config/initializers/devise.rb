@@ -303,7 +303,7 @@ Devise.setup do |config|
   #   include Turbolinks::Controller
   # end
 
-  # ==> Configuration for :registerable
+  # ==> Configuration for :
 
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.

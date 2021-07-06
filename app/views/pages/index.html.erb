@@ -5,11 +5,11 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <% if employee_signed_in? %>
-          <li>
+          <li class="abc">
             <%= link_to 'Sign out', destroy_employee_session_path, method: :delete %>
           </li>
         <% end %>
-        <li class="dropdown">
+        <li class="dropdown abc" >
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Services<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><%= link_to "abc", '#' %></li>
@@ -17,7 +17,7 @@
             <li><%= link_to "ghi", '#' %></li>
           </ul>
         </li>
-        <li><%= link_to "Contact", contact_path %></li>
+        <li class="abc" ><%= link_to "Contact", contact_path %></li>
       </ul>
     </nav>
   </div>
