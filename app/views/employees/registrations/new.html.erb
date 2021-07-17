@@ -1,3 +1,4 @@
+<%= provide(:title, 'Sign Up') %>
 <h2>Sign up</h2>
 
 <div class="form-box">
@@ -6,8 +7,18 @@
   <%= render "employees/shared/error_messages", resource: resource %>
 
   <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  </div>
+  
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :DOB %><br />
+    <%= f.date_field :DOB, autofocus: true, autocomplete: "DOB" %>
   </div>
 
   <div class="field">
