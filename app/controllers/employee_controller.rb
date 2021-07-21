@@ -14,6 +14,7 @@ class EmployeeController < ApplicationController
       @employee = Employee.new(employee_params)
       if @employee.save
         flash[:notice] = "New Employee Onboarded!"
+        OnboardMailerJob.perform_later employee_params
         redirect_to employee_path(current_employee.id)
       else
         render 'new'
