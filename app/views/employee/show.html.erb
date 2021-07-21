@@ -5,11 +5,11 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li class="item" ><%= link_to "Employees", employee_index_path %></li>
-        <li class="item" ><%= link_to "Onboard", "#" %></li>
+        <li class="item" ><%= link_to "Onboard", new_employee_path %></li>
         <li class="item" ><%= link_to "Project", "#" %></li>
         <li class="dropdown abc" >
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" 
-          aria-expanded="false">Project<span class="caret"></span></a>
+          aria-expanded="false">Account<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><%= link_to "Edit", edit_employee_registration_path %></li>
             <li><%= link_to "Sign Out", destroy_employee_session_path, method: :delete %></li>
@@ -37,19 +37,7 @@
     <p>Name:<%= @employee.name %></p><br />
     <p>Email:<%= @employee.email %></p><br />
     <p>Date Of Birth:<%= @employee.DOB %></p><br />
+    <p>Contact Number<%= @employee.contact %></p><br />
     <p>Designation:<%= @employee.designation %></p>
   </div>
 </div>
-<!-- <div class="intro">
-  <div class="image-div">
-    <img
-      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIZOOy-jvgTAZFyrEuhdHfD274z4UOm_Zk7g&usqp=CAU"
-      alt="labra"
-    />
-  </div>
-  <div class="detail-div">
-    <p>Atom</p>
-    <p>6th June, 1999</p>
-    <p>7351501027</p>
-  </div>
-</div> -->

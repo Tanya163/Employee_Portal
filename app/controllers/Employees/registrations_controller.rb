@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 class Employees::RegistrationsController < Devise::RegistrationsController
-  before_action :configure_sign_up_params, only: [:create]
-  before_action :configure_account_update_params, only: [:update]
+  # before_action :configure_sign_up_params, only: [:create]
+  # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
   # def new
@@ -10,16 +10,15 @@ class Employees::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  def create
-    debugger
-    @employee = Employee.new(configure_sign_up_params)
-    if @employee.save
-      flash[:success] = "Welcome!"
-      redirect_to new_user_session_path
-    else
-      render 'new'
-    end
-  end
+  # def create
+  #   @employee = Employee.new(configure_permitted_parameters)
+  #   if @employee.save
+  #     flash[:success] = "Employee Onboarded!!"
+  #     redirect_to employee_path(current_employee.id)
+  #   else
+  #     render 'new'
+  #   end
+  # end
 
   # GET /resource/edit
   # def edit
@@ -48,14 +47,14 @@ class Employees::RegistrationsController < Devise::RegistrationsController
   # protected
 
   # If you have extra params to permit, append them to the sanitizer.
-  def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute, :name, :email, :password, :password_confirmation, :DOB])
-  end
+  # def configure_sign_up_params
+  #   devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute, :name, :email, :password, :password_confirmation, :DOB])
+  # end
 
   # If you have extra params to permit, append them to the sanitizer.
-  def configure_account_update_params
-    devise_parameter_sanitizer.permit(:account_update, keys: [:attribute, :name, :email, :password, :password_confirmation, :DOB])
-  end
+  # def configure_account_update_params
+  #   devise_parameter_sanitizer.permit(:account_update, keys: [:attribute, :name, :email, :password, :password_confirmation, :DOB])
+  # end
 
   # The path used after sign up.
   # def after_sign_up_path_for(resource)

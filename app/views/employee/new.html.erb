@@ -1,0 +1,33 @@
+<%= provide(:title, 'Onboarding') %>
+<h1>Employee Onboard</h1>
+<div class = "form-box">
+  <div class = "details">
+    <%= form_for Employee.new, url: {action: "create"} do |form| %>
+      <div class = "field">
+        <%= form.label :name %><br />
+        <%= form.text_field :name %>
+      </div>
+      <div class="field">
+        <%= form.label :email %><br />
+        <%= form.text_field :email %>
+      </div>
+      <div class="field">
+        <%= form.label :designation %><br />
+        <%= form.text_field :designation %>
+      </div>
+      <div class= "field">
+        <%= form.label :contact %><br />
+        <%= form.text_field :contact %>
+      </div><br />
+      <div class="field">
+        <%= form.label :password %><br />
+        <%= form.password_field :password %>
+      </div>
+      <div class="field">
+        <%= form.label :password_confirmation %><br />
+        <%= form.password_field :password_confirmation %>
+      </div>
+      <%= form.submit "Onboard", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
