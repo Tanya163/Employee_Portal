@@ -1,0 +1,23 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.heading{
+    text-align: center;
+    font-size: 70px;
+    font-style: italic;
+    font-weight: 500;
+    padding-top: 10%;
+    color: rgb(18, 175, 175);
+}
+h1{
+    color: rgb(15, 211, 201);
+    font-size: 50px;
+    font-weight: 700;
+    padding-top: 7%;
+}
+.btn{
+    margin-left: 4%;
+}
+.nav > .abc:hover {
+    color: black !important;
+}

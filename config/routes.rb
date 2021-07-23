@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  devise_for :employees, controllers: {
+    :sessions => "employees/sessions",
+    :passwords => "employees/passwords",
+    :registrations => "employees/registrations" } 
+  root to: "pages#index"
+  get '/contact', to: 'pages#contact'
+  resources :employee
 end
